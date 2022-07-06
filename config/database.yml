@@ -3,8 +3,8 @@ default: &default
   adapter: postgresql
   encoding: unicode
   port: 5432
-  username: dennis
-  password: 123456
+  username: <%= ENV["HELLO_RAILS_USERNAME"] %>
+  password: <%= ENV["HELLO_RAILS_PASSWORD"] %>
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
